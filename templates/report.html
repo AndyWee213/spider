@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block body %}
+<h1 class="centered underlined">PDF Generation Example</h1>
+<h2 class="centered">Data Table</h2>
+
+<table class="datatable">
+ {% for row in table %}
+ <tr>
+ {% for cell in row %}
+ <td>{{ cell }}</td>
+ {% endfor %}
+ </tr>
+ {% endfor %}
+</table>
+
+<h2 class="centered">Paragraphs</h2>
+
+{% for paragraph in paragraphs %}
+<p>{{ paragraph }}</p>
+{% endfor %}
+
+{% endblock %}
